@@ -1,0 +1,197 @@
+/* @import "~react-image-gallery/styles/css/image-gallery.css"; */
+@font-face {
+  font-family: Raleway;
+  src: url(/src/assets/fonts/Raleway-Bold/raleway/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: Raleway-lite;
+  src: url(/src/assets/fonts/Raleway-Bold/raleway/Raleway-Light.ttf);
+}
+@font-face {
+  font-family: Oregano;
+  src: url(/src/assets/fonts/Oregano1/Oregano-Regular.ttf);
+}
+@font-face {
+  font-family: Archive;
+  src: url(/src/assets/fonts/Archive/Archive/Commercial/OTF/Archive-Regular.otf);
+}
+
+.raleway {
+  font-family: Raleway !important;
+}
+.raleway-lite {
+  font-family: Raleway-lite !important;
+}
+.oregano {
+  font-family: Oregano !important;
+}
+.archive {
+  font-family: Archive !important;
+}
+
+body {
+  background-color: #ffffff;
+}
+.yellow {
+  color: #f7a400;
+}
+.bg-yellow {
+  background-color: #f7a400;
+}
+/* nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+} */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0%;
+  background-color: transparent;
+}
+.nav-btns button {
+  padding-right: 5px;
+  padding-left: 5px;
+  border-right: 2px black solid;
+}
+.nav-btns button:last-child {
+  border: none;
+}
+.nav-btns {
+  display: flex;
+  align-items: center;
+}
+.bg-img {
+  height: 500px;
+  width: 100vw;
+  background-image: url(./images/hero-bg.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8%;
+}
+.hero-caption {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-caption p {
+  text-align: center;
+}
+.hero-caption h2 {
+  width: max-content;
+  background-color: #f7a400;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+}
+.hero-caption h5 {
+  text-align: center;
+}
+.hero-caption button {
+  color: #f7a400;
+  background-color: #d52720;
+  width: max-content;
+  border-radius: 5px;
+}
+.legend {
+  background-color: #0f4c82;
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+}
+.legend h2 {
+  color: white;
+  text-align: center;
+}
+
+.table-container {
+  display: flex;
+  min-width: min-content;
+  overflow: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  /* background-color: #f7a400; */
+}
+
+.collage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  background-image: url(./images/hero-bg.png);
+  background-size: contain;
+}
+
+.img-container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-container :first-child img {
+  width: 20vw;
+}
+.img-container :last-child img {
+  width: 30vw;
+}
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.features span {
+  display: flex;
+  flex-direction: row;
+}
+
+footer {
+  background-color: #0f4c82;
+}
+
+.productCard {
+  transform: scaleY();
+}
+.productCard .addToCartBtn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.productCard:hover .addToCartBtn {
+  opacity: 1;
+  visibility: visible;
+}
+.loader {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  display: inline-grid;
+}
+.loader:before,
+.loader:after {
+  content: "Loading...";
+  grid-area: 1/1;
+  -webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+  animation: l11 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
+}
+.loader:after {
+  -webkit-mask-position: 1ch 50%;
+  --s: -1;
+}
+.categories-img img:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.04);
+  cursor: pointer;
+}
+@keyframes l11 {
+  100% {
+    transform: translateY(calc(var(--s, 1) * 0.1%));
+  }
+}
