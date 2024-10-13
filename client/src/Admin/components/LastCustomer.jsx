@@ -13,14 +13,6 @@ const LastCustomer = ({dateRange}) => {
 
     const { data, isLoading, isError } = useSelector((state) => state.messages);
   
-    useEffect(() => {
-      if (data.data) {
-        setMessages(data.data);
-      }
-    }, [data.data]);
-    useEffect(() => {
-      dispatch(fetchMessages(dateRange));
-    }, [dispatch, dateRange]);
 
     return (
         <Box sx={{ display: "grid", gridTemplateRows: "repeat(4, 1fr)" }}>

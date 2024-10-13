@@ -137,7 +137,7 @@ function SideNav(props) {
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="addproduct">
+          <ListItemButton component={Link} to="addexampaper">
             <ListItemIcon>
               <AddIcon />
             </ListItemIcon>
@@ -146,16 +146,16 @@ function SideNav(props) {
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="categories">
+          <ListItemButton component={Link} to="exameaperdetails">
             <ListItemIcon>
               <CategoryIcon />
             </ListItemIcon>
-            <ListItemText primary={"Add Categories"} />
+            <ListItemText primary={"Added Exams"} />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="addcategory">
+          <ListItemButton component={Link} to="addsubject">
             <ListItemIcon>
               <LibraryAddIcon />
             </ListItemIcon>
